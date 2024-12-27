@@ -36,6 +36,7 @@
 		
 	}
 </script>
+<!-- https://bulma.io/documentation/form/general/ -->
 <div class="container" style="padding: 1rem">
 	<div class="columns">
 	  <div class="column">
@@ -44,11 +45,20 @@
 				<input type="number" bind:value={obj.id} min="0" max="10" />
 				</label> -->
 				{#each [ "a", "b", "c" ] as name}
-					<div class="field">
-						<label class="label" for="name">Name</label>
-						<div class="control">
-							<input class="input" id="name" type="text" placeholder="">
-						</div>
+					<div class="field is-horizontal">
+					  <div class="field-label is-normal">
+					    <label class="label" for="name">Name</label>
+					  </div>
+						 <div class="field-body">
+					    <div class="field">
+					      <div class="control">
+					        <input class="input" id="name" type="text" placeholder="">
+								</div>
+					      <!-- <p class="help is-danger">
+					        This field is required
+					      </p> -->
+					    </div>
+					  </div>
 					</div>
 				{/each}
 				<input type="submit" value="submit">
