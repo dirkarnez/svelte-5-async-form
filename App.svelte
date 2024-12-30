@@ -7,6 +7,16 @@
 <script>
 	let obj = $state({id: 0});
 
+	/* localhost api for
+	PHP
+	function enableCORS(Response $response) {
+	    return $response
+		->withHeader('Content-Type', 'application/json')
+		->withHeader('Access-Control-Allow-Origin', '*')
+		->withHeader('Access-Control-Allow-Headers', '*')
+		->withHeader('Access-Control-Allow-Methods', '*');
+	}
+	*/
 	$effect(() => {
 		if (!!obj.id && obj.id > 0) {
 			new Promise(res => {
